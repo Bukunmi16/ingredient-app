@@ -1,6 +1,6 @@
 import { HfInference } from "@huggingface/inference";
 
-// const apiKey = import.meta.env.VITE_HF_ACCESS_TOKEN;
+const apiKey = import.meta.env.VITE_HF_ACCESS_TOKEN;
 // console.log(apiKey);
 
 
@@ -19,7 +19,7 @@ export async function getRecipeFromHF(ingredientsArr) {
     and try to tailor your suggestion to Nigerian dishes first. If you can't get a Nigerian recipe with 
     the ingredients listed, then you can tailor it to intercontinental dishes. Only the suggested dish's name should be in a strong element.`
 
-    const client = new HfInference();
+    const client = new HfInference(apiKey);
 
     const chatCompletion = await client.chatCompletion({
 	model: "mistralai/Mistral-7B-Instruct-v0.3",
