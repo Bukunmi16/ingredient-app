@@ -1,0 +1,53 @@
+UseState Practice
+        <section className="number-section">
+        <h3>{count}</h3>
+            <div className="btns">
+            <button onClick={subtract}>
+            -
+            </button>
+            
+            <button onClick={add}>
+            +   
+            </button>
+                
+            </div>
+        </section>
+        
+    function add() {
+        setCount(prevCount => prevCount + 1)
+    }
+    
+    function subtract() {
+        setCount(prevCount => prevCount - 1)
+    }
+
+        const [count, setCount] = useState(0)
+
+    function add() {
+        setCount(prevCount => prevCount + 1)
+    }
+    
+    function subtract() 
+        setCount(prevCount => prevCount - 1)
+
+ <Count
+        number={count}
+        addFunction={add}
+        subtractFunction={subtract}
+        /> 
+    
+
+Conditional Rendering Practice
+    const [unreadMessages, setUnreadMessages] = useState([])
+    
+    
+        { unreadMessages.length > 0 ? 
+        <h1>You have 
+        {unreadMessages.length == 1 ? ` ${unreadMessages.length}
+         unread message!` :
+        ` ${unreadMessages.length} unread messages!`} </h1>
+        : "You're all caught up!" }
+
+        <br />
+        <hr/>
+    
