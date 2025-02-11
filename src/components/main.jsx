@@ -7,7 +7,7 @@ import { getRecipeFromHF } from "../../ai"
 
 export default function Main() {
     
-    const [ingredients, setIngredients] = useState("water"])
+    const [ingredients, setIngredients] = useState(["water"])
     const [recipe, setRecipe] = useState("")
     const recipeSection = useRef(null)
 
